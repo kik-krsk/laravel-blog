@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2">
                         <a href="{{ route('admin.category.create') }}" type="button"
                             class="btn btn-block btn-primary mb-3">Добавить</a>
                     </div>

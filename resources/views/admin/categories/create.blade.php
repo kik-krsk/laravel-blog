@@ -35,7 +35,7 @@
                                     <div class="text-danger">Это поле необходимо для заполения</div>
                                 @enderror
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Обновить">
+                            <input type="submit" class="btn btn-primary" value="Добавить">
                         </form>
                     </div>
                 </div>
