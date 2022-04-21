@@ -8,12 +8,6 @@ use App\Http\Requests\Admin\Category\StoreRequest;
 
 class StoreController extends Controller
 {
-    /**
-     * a
-     *
-     * @var string
-     */
-    public $a;
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
