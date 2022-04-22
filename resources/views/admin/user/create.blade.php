@@ -30,25 +30,39 @@
                             <div class="form-group">
                                 <label>Имя</label>
                                 <input type="text" class="form-control" name="name"
-                                        placeholder=" Введите имя пользователя">
+                                    placeholder=" Введите имя пользователя">
                                 @error('title')
-                                    <div class="text-danger">{{$message}}</div>
+                                    <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" class="form-control" name="email"
-                                        placeholder=" Введите имя пользователя">
+                                    placeholder=" Введите имя пользователя">
                                 @error('email')
-                                    <div class="text-danger">{{$message}}</div>
+                                    <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Пароль</label>
                                 <input type="text" class="form-control" name="password"
-                                        placeholder=" Введите имя пользователя">
+                                    placeholder=" Введите имя пользователя">
                                 @error('password')
-                                    <div class="text-danger">{{$message}}</div>
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label>Выбирите роль</label>
+                                <select name="role" class="form-control">
+                                    @foreach ($roles as $id => $role)
+                                        <option value="{{ $id }}"
+                                            {{ $id == old('role') ? ' selected' : '' }}>
+                                            {{ $role }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @error('role')
+                                    <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <input type="submit" class="btn btn-primary" value="Добавить">
