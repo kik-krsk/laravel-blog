@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
-
-
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -84,7 +82,7 @@
     <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
     <!-- Select2 -->
-    <script src="{{ asset('plugins/select2/js/select2.full.min.js')}}"></script>
+    <script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>
 
     <script>
         $(document).ready(function() {
