@@ -6,12 +6,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard</h1>
+                        <h1 class="m-0">Главная</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
+                            {{-- <li class="breadcrumb-item active">Главная v1</li> --}}
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -28,14 +28,13 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>150</h3>
-
-                                <p>New Orders</p>
+                                <h3>{{ $data['users'] }}</h3>
+                                <p>Пользователи</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-bag"></i>
+                                <i class="fas fa-users"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{route('admin.user.index')}}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -43,14 +42,13 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                                <p>Bounce Rate</p>
+                                <h3>{{ $data['posts'] }} </h3>
+                                <p>Посты</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-stats-bars"></i>
+                                <i class="fas fas fa-mail-bulk"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{route('admin.post.index')}}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -58,14 +56,15 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3>44</h3>
+                                <h3>{{ $data['categories'] }}</h3>
 
-                                <p>User Registrations</p>
+                                <p>Категории</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-person-add"></i>
+                                <i class="fas fa-th-list"></i>
+
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{route('admin.category.index')}}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -73,14 +72,14 @@
                         <!-- small box -->
                         <div class="small-box bg-danger">
                             <div class="inner">
-                                <h3>65</h3>
+                                <h3>{{ $data['tags'] }}</h3>
 
-                                <p>Unique Visitors</p>
+                                <p>Тэги</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-pie-graph"></i>
+                                <i class="fas fa-tags"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{route('admin.tag.index')}}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
