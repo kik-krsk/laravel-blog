@@ -10,18 +10,11 @@ use App\Models\User;
 
 class IndexController extends Controller
 {
-    /**
-     * a.
-     *
-     * @var string
-     */
-    public $a;
-
     public function __invoke()
     {
         $data['users'] = User::all()->count();
         $data['posts'] = Post::all()->count();
-        $data['tags' ]= Tag::all()->count();
+        $data['tags'] = Tag::all()->count();
         $data['categories'] = Category::all()->count();
 
         return view('admin.main.index', compact('data'));
