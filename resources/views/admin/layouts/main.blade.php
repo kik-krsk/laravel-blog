@@ -42,7 +42,12 @@
                             class="fas fa-bars"></i></a>
                 </li>
             </ul>
-
+            <ul class="navbar-nav ml-auto">
+                <form action="{{ route('logout') }} " method="POST">
+                    @csrf
+                    <input class="btn btn-outline-primary" type="submit" value="Выйти">
+                </form>
+            </ul>
         </nav>
         <!-- /.navbar -->
         @include('admin.includes.sidebar')
